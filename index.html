@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <title>Asynchronus JavaScript Project v2</title>
+</head>
+
+<body>
+
+    <div class="weather-background-wrapper">
+        <img class="weather-background-wrapper-img">
+    </div>
+    <div class="weather-wrapper">
+        <div class="weather-search">
+            <img src="img/weather.gif" alt="" class="weather-animation">
+            <form id=search-form>
+                <input class="form-input" type=" search" autocapitalize="none" autocomplete="off" autocorrect="off"
+                    aria-label="Szukaj" placeholder="Enter a city">
+                <button class="search-button" type="submit" aria-label="Szukaj">
+                    <svg viewBox="0 0 24 24" focusable="false"
+                        style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                        <g>
+                            <path
+                                d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+                            </path>
+                        </g>
+                    </svg>
+                </button>
+                <div class="weather-search-shadow"></div>
+            </form>
+            <p class="error-message"></p>
+        </div>
+        <div class="weather-cnt">
+            <button type="button" class="confirm-data-close">
+                <svg height="365.696pt" viewBox="0 0 365.696 365.696" width="365.696pt" fill="#FFFFFF"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="m243.1875 182.859375 113.132812-113.132813c12.5-12.5 12.5-32.765624 0-45.246093l-15.082031-15.082031c-12.503906-12.503907-32.769531-12.503907-45.25 0l-113.128906 113.128906-113.132813-113.152344c-12.5-12.5-32.765624-12.5-45.246093 0l-15.105469 15.082031c-12.5 12.503907-12.5 32.769531 0 45.25l113.152344 113.152344-113.128906 113.128906c-12.503907 12.503907-12.503907 32.769531 0 45.25l15.082031 15.082031c12.5 12.5 32.765625 12.5 45.246093 0l113.132813-113.132812 113.128906 113.132812c12.503907 12.5 32.769531 12.5 45.25 0l15.082031-15.082031c12.5-12.503906 12.5-32.769531 0-45.25zm0 0">
+                    </path>
+                </svg>
+            </button>
+            <div class="weather-background">
+                <img class="weather-background-img">
+            </div>
+            <div class="weather-data">
+                <div class="weather-data-main">
+                    <div class="weather-data-main-cnt">
+                        <div class="weather-data-main-icon">
+                            <img class="weather-data-main-icon-img">
+                        </div>
+                        <div class="weather-data-main-status"></div>
+                        <div class="weather-data-main-location"></div>
+                        <div class="weather-data-main-temp"></div>
+                        <div class="weather-change-data"><img src="img/icon/clock-circular-outline.svg" alt="">
+                            <span class="weather-data-main-time"></span>
+                        </div>
+                    </div>
+                    <div class="weather-data-deatails-wrapper">
+                        <div class="weather-data-deatails-cnt">
+                            <div class="weather-data-deatails-icon">
+                                <img src="img/icon/022-humidity.svg" alt="">
+                            </div>
+                            <div class="weather-data-deatails">
+                                <div class="weather-data-deatails-title">Humidity</div>
+                                <div class="weather-data-deatails-data weather-data-main-humidity"></div>
+                            </div>
+                        </div>
+                        <div class="weather-data-deatails-cnt">
+                            <div class="weather-data-deatails-icon">
+                                <img src="img/icon/pressure.svg" alt="">
+                            </div>
+                            <div class="weather-data-deatails">
+                                <div class="weather-data-deatails-title">Air pressure</div>
+                                <div class="weather-data-deatails-data weather-data-main-pressure"></div>
+                            </div>
+                        </div>
+                        <div class="weather-data-deatails-cnt">
+                            <div class="weather-data-deatails-icon">
+                                <img src="img/icon/009-cloudy.svg" alt="">
+                            </div>
+                            <div class="weather-data-deatails">
+                                <div class="weather-data-deatails-title">Cloudiness</div>
+                                <div class="weather-data-deatails-data weather-data-main-cloudiness"></div>
+                            </div>
+                        </div>
+                        <div class="weather-data-deatails-cnt">
+                            <div class="weather-data-deatails-icon">
+                                <img src="img/icon/012-windy.svg" alt="">
+                            </div>
+                            <div class="weather-data-deatails">
+                                <div class="weather-data-deatails-title">Wind Speed</div>
+                                <div class="weather-data-deatails-data weather-data-main-wind-speed"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="weather-data-daily-wrapper">
+                    <div class="weather-data-daily-button-wrapper">
+                        <div class="weather-data-daily-button weather-data-daily-previous-button">
+                            <img src="img/icon/arrow-point-to-left.svg" alt="">
+                        </div>
+                        <div class="weather-data-daily-button weather-data-daily-next-button">
+                            <img src="img/icon/arrow-point-to-right.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="weather-data-daily-cnt">
+                        <div class="weather-data-daily-slider"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="loader">
+            <div class="dot-loader"></div>
+            <div class="dot-loader"></div>
+            <div class="dot-loader"></div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
