@@ -29,6 +29,8 @@ git clone git@github.com:KoTubA/Weather-API-JS.git
 The project uses [AccuWeather APIs.](https://developer.accuweather.com/) In order to use the site, you need to create an account and add a new application. The next step is to replace the application key in the `main.js` file.
 
 ````JavaScript
+//main.js
+
 const api = {
     key: "my_api_key"
 }
