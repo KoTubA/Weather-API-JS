@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const api = {
         key: "dd9c76de28a7dee3d4a4dbe15ddd5933",
-        url: "http://api.openweathermap.org/data/2.5/",
+        url: "https://api.openweathermap.org/data/2.5/",
         days: 16,
         units: "metric"
     }

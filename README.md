@@ -1,4 +1,4 @@
-# Frontend Mentor - Manage landing page
+# Weather-API-JS
 
 ## Project prupose
 
@@ -8,19 +8,19 @@ The website was created for a larger project called ["Front-end-foundations".](h
 
 ## Live demo
 
-Link to demo:
+Link to demo: https://kotuba.github.io/Weather-API-JS/
 
 ## How to run?
 
 **1. Clone this repository:**
 ```
-git clone
+git clone https://github.com/KoTubA/Weather-API-JS.git
 ```
 
 or:
 
 ```
-git clone
+git clone git@github.com:KoTubA/Weather-API-JS.git
 ```
 
 ## Project status
