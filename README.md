@@ -35,8 +35,3 @@ const api = {
     key: "my_api_key"
 }
 ````
-
-
-## Project status
-
-The project has been completed and will no longer be developed in the future.
