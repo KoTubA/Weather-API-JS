@@ -82,7 +82,7 @@ body {
           flex-direction: column;
   max-width: 500px;
   width: 100%;
-  padding: 8vh 10px 10px 0px;
+  padding: 8vh 10px 0px 10px;
   height: 100vh;
   -webkit-box-flex: 0;
       -ms-flex: 0 1;
